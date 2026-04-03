@@ -1,0 +1,45 @@
+.rainbow-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.rainbow-progress-bar__track {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.rainbow-progress-bar__fill {
+  height: 100%;
+  width: 40%;
+  border-radius: 0 2px 2px 0;
+  background: linear-gradient(
+    90deg,
+    #feda75 0%,
+    #fa7e1e 15%,
+    #d62976 35%,
+    #962fbf 55%,
+    #4f5bd5 75%,
+    #007bff 100%
+  );
+  animation: rainbow-slide 1.4s ease-in-out infinite;
+}
+
+@keyframes rainbow-slide {
+  0% {
+    transform: translateX(-100%);
+    width: 40%;
+  }
+  50% {
+    width: 60%;
+  }
+  100% {
+    transform: translateX(350%);
+    width: 40%;
+  }
+}
